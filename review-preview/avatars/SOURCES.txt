@@ -1,0 +1,8 @@
+OpenMoji 16.0.0 — HfG Schwäbisch Gmünd / OpenMoji contributors
+https://openmoji.org/
+License: CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/
+SVGs are unmodified. CSS motion is a separate presentation effect.
+https://raw.githubusercontent.com/hfg-gmuend/openmoji/16.0.0/color/svg/1F468.svg
+https://raw.githubusercontent.com/hfg-gmuend/openmoji/16.0.0/color/svg/1F469.svg
+https://raw.githubusercontent.com/hfg-gmuend/openmoji/16.0.0/color/svg/1F474.svg
+https://raw.githubusercontent.com/hfg-gmuend/openmoji/16.0.0/color/svg/1F475.svg
