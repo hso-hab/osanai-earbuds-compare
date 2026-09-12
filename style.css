@@ -21,9 +21,9 @@ thead a{overflow-wrap:anywhere}
 
 /* One horizontally scrollable comparison, with a fixed label column. */
 [hidden]{display:none!important}
-.compare-tools{margin:18px 0 12px}.compare-filters{display:flex;flex-wrap:wrap;gap:8px}
-.compare-filters button{background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:24px;padding:10px 16px;min-height:44px;cursor:pointer;font-size:14px;font-weight:650}
-.compare-filters button small{font-size:12px;margin-left:6px}.compare-filters button[aria-pressed=true]{border:2px solid var(--accent);padding:9px 15px;color:var(--accent)}
+
+
+
 .compare-navigation{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:12px 0;font-size:13px}.compare-navigation p{margin:0;font-weight:700}.compare-navigation>div{display:flex;align-items:center;gap:12px}.compare-navigation span{color:var(--muted)}
 .compare-navigation button{background:#fff;border:1px solid #000;border-radius:4px;min-width:44px;min-height:44px;font-size:22px;color:var(--accent);cursor:pointer}.compare-navigation button:disabled{opacity:.3;cursor:default}
 .comparison-scroll{--label-width:110px;--product-width:208px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scroll-padding-left:var(--label-width);border:1px solid #000}
@@ -40,6 +40,6 @@ thead a{overflow-wrap:anywhere}
 .wide-compare .feature-row small,.wide-compare .signature-row small{font-size:13px;line-height:1.6;margin-top:5px}
 .wide-compare small{font-size:12px}.wide-compare tbody td:last-child{font-size:15px}.wide-compare .price-row td:last-child{font-size:22px}
 #spec-toggle{display:block;width:100%;background:white;border:1px solid var(--line);color:var(--accent);border-radius:5px;min-height:48px;padding:12px;margin-top:12px;font:inherit;font-size:14px;font-weight:650;cursor:pointer}
-@media(max-width:540px){.comparison-scroll{--label-width:72px;--product-width:max(132px,calc((100vw - 106px)/2))}.compare-filters{gap:6px}.compare-filters button{font-size:12px;padding:10px 11px}.compare-filters button[aria-pressed=true]{padding:9px 10px}.compare-filters button small{margin-left:3px}.compare-navigation{font-size:12px}.compare-navigation>div{gap:8px}.wide-compare th,.wide-compare td{padding:14px 10px}.wide-compare tr>:first-child,.wide-compare thead th:first-child{font-size:12px;padding:12px 4px}.wide-compare .compare-name{font-size:15px}.wide-compare .feature-row td,.wide-compare .signature-row td,.wide-compare tbody td:last-child{font-size:14px;padding:14px 10px}.wide-compare .price-row td,.wide-compare .price-row td:last-child{font-size:20px}.wide-compare .feature-row small,.wide-compare .signature-row small{font-size:12px}.wide-compare .compare-image{width:104px;height:86px}.wide-compare .compare-brand{font-size:10px}#spec-toggle{font-size:13px}}
+@media(max-width:540px){.comparison-scroll{--label-width:72px;--product-width:max(132px,calc((100vw - 106px)/2))}.compare-navigation{font-size:12px}.compare-navigation>div{gap:8px}.wide-compare th,.wide-compare td{padding:14px 10px}.wide-compare tr>:first-child,.wide-compare thead th:first-child{font-size:12px;padding:12px 4px}.wide-compare .compare-name{font-size:15px}.wide-compare .feature-row td,.wide-compare .signature-row td,.wide-compare tbody td:last-child{font-size:14px;padding:14px 10px}.wide-compare .price-row td,.wide-compare .price-row td:last-child{font-size:20px}.wide-compare .feature-row small,.wide-compare .signature-row small{font-size:12px}.wide-compare .compare-image{width:104px;height:86px}.wide-compare .compare-brand{font-size:10px}#spec-toggle{font-size:13px}}
 
 .model-suffix{white-space:nowrap}

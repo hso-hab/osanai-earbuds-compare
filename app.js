@@ -12,30 +12,17 @@ document.querySelectorAll('[data-choice]').forEach(button => button.addEventList
   link.textContent = choice.label;
 }));
 
-// Keep a readable column width and filter the same nine products in place.
-const compareFilters = {"all": ["beats", "apple", "sony", "sport-x20", "race2", "linkbuds-fit", "powerbeats-fit", "peak4", "liberty4pro"], "budget": ["sport-x20", "race2", "peak4", "liberty4pro"], "hook": ["beats", "sport-x20", "peak4"]};
+// Keep all nine products visible with horizontal navigation.
 const compareScroll = document.getElementById('compare-scroll');
 const compareTable = compareScroll.querySelector('table');
 const prevButton = document.getElementById('compare-prev');
 const nextButton = document.getElementById('compare-next');
 const specToggle = document.getElementById('spec-toggle');
-let activeFilter = 'all';
-document.querySelector('.compare-tools').hidden = false;
 prevButton.hidden = nextButton.hidden = specToggle.hidden = false;
 function updateNavigation() {
   prevButton.disabled = compareScroll.scrollLeft < 2;
   nextButton.disabled = compareScroll.scrollLeft + compareScroll.clientWidth >= compareScroll.scrollWidth - 2;
 }
-document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
-  activeFilter = button.dataset.filter;
-  const ids = compareFilters[activeFilter];
-  document.querySelectorAll('[data-filter]').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
-  compareTable.querySelectorAll('[data-product]').forEach(cell => { cell.hidden = !ids.includes(cell.dataset.product); });
-  compareTable.style.setProperty('--product-count', ids.length);
-  document.getElementById('compare-status').textContent = ids.length + '機種を比較';
-  compareScroll.scrollLeft = 0;
-  requestAnimationFrame(updateNavigation);
-}));
 function moveComparison(direction) {
   const cell = compareTable.querySelector('thead [data-product]:not([hidden])');
   const amount = cell.getBoundingClientRect().width;
