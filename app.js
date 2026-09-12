@@ -1,12 +1,13 @@
-const choices={
-  fit:{name:'Powerbeats Pro 2',id:'beats',reason:'耳に掛けるフックで支える方式。運動中の固定方法を重視するなら、まず試着したい候補です。'},
-  iphone:{name:'AirPods Pro 3',id:'apple',reason:'iPhoneとの連携に加えて、ケースもIP57の耐汗・耐水仕様。BeatsもH2搭載なので、フックの有無や耳への収まりで比べましょう。'},
-  price:{name:'Sony WF-1000XM6',id:'sony',reason:'確認時点の公式表示価格は39,600円。この3機種では低価格ですが、AirPods Pro 3との差は200円です。市場全体の最安値ではありません。'}
+const choices = {
+  gym: { reason: 'ジム中心なら、耳掛けのあるBeatsを候補に。フックも含めて試着を。', id: 'beats', label: 'Beatsを見る ↗' },
+  outdoor: { reason: '屋外では周囲の音を優先。3機種とも外音取り込み対応。つけ方で比べましょう。', id: 'compare', label: 'つけ方を比べる ↓' },
+  daily: { reason: '毎日の持ち歩きには、ケースもIP57のAirPodsが候補。BeatsもH2搭載です。', id: 'apple', label: 'AirPodsを見る ↗' }
 };
-document.querySelectorAll('[data-choice]').forEach(button=>button.addEventListener('click',()=>{
-  const choice=choices[button.dataset.choice];
-  document.querySelectorAll('[data-choice]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
-  document.getElementById('pick-name').textContent=choice.name;
-  document.getElementById('pick-reason').textContent=choice.reason;
-  document.getElementById('pick-link').href='#'+choice.id;
+document.querySelectorAll('[data-choice]').forEach(button => button.addEventListener('click', () => {
+  const choice = choices[button.dataset.choice];
+  document.querySelectorAll('[data-choice]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+  document.getElementById('pick-reason').textContent = choice.reason;
+  const link = document.getElementById('pick-link');
+  link.href = '#' + choice.id;
+  link.textContent = choice.label;
 }));
