@@ -1,12 +1,9 @@
-// Greet once when each illustration enters view; never animate the review text.
-if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
+// Native details/summary handles all input; illustrate only when a card is opened.
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.querySelectorAll('.voice-card').forEach(card => {
+    card.addEventListener('toggle', () => {
+      if (card.open) card.classList.add('is-visible');
+      else card.classList.remove('is-visible');
     });
-  }, {threshold: 0.15});
-  document.querySelectorAll('.voice-card').forEach(card => observer.observe(card));
+  });
 }
